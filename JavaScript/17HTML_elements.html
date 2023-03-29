@@ -14,7 +14,17 @@
     <input type="text" name="inpId" id="inpId">
     <input type="text" name="inpClass" class="inpClass" id="inpClass">
     <button id="btn">Click</button>
+    <h2>Keyboard Event</h2>
+    <input type="text" onkeydown="getData(this)" placeholder="Onkeydown" name="" id=""> <br>
+    <input type="text" onkeypress="getData(this)" placeholder="OnkeyPress" name="" id=""> <br>
+    <input type="text" onkeyup="getData(this)" placeholder="OnkeyUp" name="" id=""><br>
+    <div class="disp" id="disp"></div>
+
     <script>
+        function getData(kaipan) {
+            console.log(kaipan.value);
+            document.getElementById("disp").innerText = kaipan.value
+        }
         document.getElementById('btn').addEventListener("click",function () {
             // console.log(document.body);
             Inp = document.getElementById("inpId")
