@@ -24,13 +24,21 @@
                 const element = SliderImageData[index];
                 console.log(element);
                 SliderImageData[index].style.display = "none"
+                SliderImageData[index].classList.remove("slider-effect")
+            }
+            // console.log("counter",counter);
+            // console.log("SliderImageData.length",SliderImageData.length);
+            if (counter >= SliderImageData.length) {
+                counter=0
             }
             SliderImageData[counter].style.display = "block"
+            SliderImageData[counter].classList.add("slider-effect")
             setTimeout(() => {
                 counter++;
                 slider()
             }, 3000);
         }
+
         slider()
     </script>
 </body>
