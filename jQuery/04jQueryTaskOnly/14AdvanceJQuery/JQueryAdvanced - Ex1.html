@@ -59,14 +59,15 @@
     </script>
 
     <script>
-        $("#article")
-            .append($("input").map(function () {
+        console.log($("input").map(function () {
                 return $(this).val();
-            })
-                .get()
-                .join(", "));
+            }).get().join(", "));
+        $("#article").append($("input").map(function () {
+                return $(this).val();
+            }).get().join(", "));
     </script>
     <script>
+        console.log($("p").find("em").end());
         $("p")
             .find("em")
             .end()
